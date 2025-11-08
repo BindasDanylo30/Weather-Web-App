@@ -11,6 +11,7 @@ const error = document.querySelector(".error");
 // Function to fetch weather data
 async function checkWeather(city) {
   const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+
   if (response.status == 404) {
     weather.style.display = "none";
     error.style.display = "block";
