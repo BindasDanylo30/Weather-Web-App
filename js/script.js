@@ -1,4 +1,4 @@
-const apiKey = "99156564c14c53925a38fe30f1823068";
+import { apiKey } from "./config.js";
 
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
 
@@ -40,6 +40,9 @@ async function checkWeather(city) {
     Rain: "fa-cloud-rain",
     Mist: "fa-smog",
     Drizzle: "fa-cloud-drizzle",
+    Clouds: "fa-cloud",
+    Snow: "fa-snowflake",
+    Thunderstorm: "fa-bolt",
   };
   const fa_icon = list[data.weather[0].main] || "fa-question";
   weatherIcon.className = `fa-solid ${fa_icon}`;
